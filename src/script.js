@@ -48,10 +48,10 @@ window.addEventListener("DOMContentLoaded", () => {
           Wspan.classList.add("fade");
         }, (idx + 1) * 50);
       });
-    }, 1500);
+    }, 2000);
 
     setTimeout(() => {
       splashscreen.style.top = "-100vh";
-    }, 1800);
+    }, 2200);
   });
 });
