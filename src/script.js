@@ -15,9 +15,9 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 );
 
-let splashscreen = document.querySelector(".splashscreen");
-let logo = document.querySelector(".logo-header");
-let logoSpan = document.querySelectorAll(".logo");
+let splashscreen = document.querySelector(".splashscreen-container");
+let logo = document.querySelector(".splashscreen-subcontainer");
+let logoSpan = document.querySelectorAll(".splashscreen-element");
 let welcomeSpan = document.querySelectorAll(".typewriter");
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -55,3 +55,75 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 2200);
   });
 });
+
+ScrollReveal().reveal(".mission-container, .services-container, .who-i-am-container, .testimony-container, .contact-container", {
+  reset: false,
+  interval: 16,
+  duration: 1300
+});
+
+/**
+ * Smooth scrolling
+ *    note : add -70 to cover navbar height
+ **/
+
+$(function() {
+  $("a[href*='#services']:not([href='services'])").click(function() {
+    if (
+      location.hostname == this.hostname &&
+      this.pathname.replace(/^\//, "") == location.pathname.replace(/^\//, "")
+    ) {
+      var anchor = $(this.hash);
+      anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) + "]");
+      if (anchor.length) {
+        $("html, body").animate({ scrollTop: anchor.offset().top - 70}, 2000);
+      }
+    }
+  });
+});
+
+$(function() {
+  $("a[href*='#who-i-am']:not([href='who-i-am'])").click(function() {
+    if (
+      location.hostname == this.hostname &&
+      this.pathname.replace(/^\//, "") == location.pathname.replace(/^\//, "")
+    ) {
+      var anchor = $(this.hash);
+      anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) + "]");
+      if (anchor.length) {
+        $("html, body").animate({ scrollTop: anchor.offset().top - 70}, 2000);
+      }
+    }
+  });
+});
+
+$(function() {
+  $("a[href*='#testimony']:not([href='testimony'])").click(function() {
+    if (
+      location.hostname == this.hostname &&
+      this.pathname.replace(/^\//, "") == location.pathname.replace(/^\//, "")
+    ) {
+      var anchor = $(this.hash);
+      anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) + "]");
+      if (anchor.length) {
+        $("html, body").animate({ scrollTop: anchor.offset().top - 70 }, 2000);
+      }
+    }
+  });
+});
+
+$(function() {
+  $("a[href*='#contact']:not([href='contact'])").click(function() {
+    if (
+      location.hostname == this.hostname &&
+      this.pathname.replace(/^\//, "") == location.pathname.replace(/^\//, "")
+    ) {
+      var anchor = $(this.hash);
+      anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) + "]");
+      if (anchor.length) {
+        $("html, body").animate({ scrollTop: anchor.offset().top - 70}, 2000);
+      }
+    }
+  });
+});
+7
