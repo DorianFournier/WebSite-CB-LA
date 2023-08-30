@@ -66,6 +66,20 @@ ScrollReveal().reveal(".mission-container, .services-container, .who-i-am-contai
  * Smooth scrolling
  *    note : add -70 to cover navbar height
  **/
+$(function() {
+  $("a[href*='#mission']:not([href='mission'])").click(function() {
+    if (
+      location.hostname == this.hostname &&
+      this.pathname.replace(/^\//, "") == location.pathname.replace(/^\//, "")
+    ) {
+      var anchor = $(this.hash);
+      anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) + "]");
+      if (anchor.length) {
+        $("html, body").animate({ scrollTop: anchor.offset().top - 70}, 1300);
+      }
+    }
+  });
+});
 
 $(function() {
   $("a[href*='#services']:not([href='services'])").click(function() {
@@ -76,7 +90,7 @@ $(function() {
       var anchor = $(this.hash);
       anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) + "]");
       if (anchor.length) {
-        $("html, body").animate({ scrollTop: anchor.offset().top - 70}, 2000);
+        $("html, body").animate({ scrollTop: anchor.offset().top - 70}, 1300);
       }
     }
   });
@@ -91,7 +105,7 @@ $(function() {
       var anchor = $(this.hash);
       anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) + "]");
       if (anchor.length) {
-        $("html, body").animate({ scrollTop: anchor.offset().top - 70}, 2000);
+        $("html, body").animate({ scrollTop: anchor.offset().top - 70}, 1300);
       }
     }
   });
@@ -106,7 +120,7 @@ $(function() {
       var anchor = $(this.hash);
       anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) + "]");
       if (anchor.length) {
-        $("html, body").animate({ scrollTop: anchor.offset().top - 70 }, 2000);
+        $("html, body").animate({ scrollTop: anchor.offset().top - 70 }, 1300);
       }
     }
   });
@@ -121,7 +135,7 @@ $(function() {
       var anchor = $(this.hash);
       anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) + "]");
       if (anchor.length) {
-        $("html, body").animate({ scrollTop: anchor.offset().top - 70}, 2000);
+        $("html, body").animate({ scrollTop: anchor.offset().top - 70}, 1300);
       }
     }
   });

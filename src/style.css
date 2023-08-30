@@ -25,6 +25,7 @@ body {
     background-color: var(--bg-col-1);
 }
 
+
 h1,
 h2,
 h3 {
@@ -154,6 +155,68 @@ h3 {
     color: var(--bg-col-1);
     opacity: 0.9;
 }
+
+/* HERO 2 */
+.hero-container-2 {
+    position: relative;
+    top: 70px;
+    width: 90vw;
+    height: 45vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--col-1);
+}
+
+.hero-elements-2 {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image-2 {
+    object-fit: cover;
+    position: absolute;
+    width: 85vw;
+    height: 45vh;
+    margin-left: auto;
+    margin-right: auto;
+    top: 40px;
+}
+
+.hero-opacity-2 {
+    background: var(--col-black);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.hero-mouse-2 {
+    position: absolute;
+    top: 85%;
+    transition: ease-in-out .3s;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.hero-mouse-2:hover {
+    transform: scale(1.1);
+}
+
+.hero-title-2 {
+    position: absolute;
+    text-align: center;
+    padding: 0% 5% 0% 5%;
+    transform: translate(-50%, -50%);
+    text-shadow: .1em .1em 0 var(--col-1bis);
+    z-index: 1;
+}
+
+.hero-title-2 {
+    font-size: 130px;
+    width: 100%;
+    top: 52%;
+    left: 50%;
+    color: var(--bg-col-white);
+}
+
 
 /* NAVIGATION BAR */
 li {
